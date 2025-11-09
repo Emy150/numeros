@@ -14,8 +14,6 @@
   font-display: swap;
 }
 
-
-/* Estilos generales */
 html, body {
   height: 100%;
   margin: 0;
@@ -31,11 +29,10 @@ body {
   min-height: 100vh;
 }
 
-/* Encabezado */
 header {
   background-color: #F9A4CB;
   color: #000000;
-  padding: 4%; /* antes 30px → ahora más bajo */
+  padding: 4%; 
   width: 100%;
   display: flex;
   align-items: center;
@@ -47,9 +44,9 @@ header {
 
 .logo {
   position: absolute;
-  left: 6%; /* margen proporcional */
-  width: 18%; /* ligeramente menor para ajustarse al header */
-  max-width: 100px; /* límite superior reducido */
+  left: 6%; 
+  width: 18%; 
+  max-width: 100px; 
   min-width: 60px;  
   height: auto;
   object-fit: contain;
@@ -57,24 +54,20 @@ header {
 
 header h1 {
   font-family: 'SAI', cursive;
-  font-size: 4em; /* antes 4em */
+  font-size: 4em; 
   margin: 0;
-  padding-left: 120px; /* menos espacio lateral */
+  padding-left: 120px; 
   text-align: center;
-  line-height: 1.1; /* reduce el espacio vertical interno */
+  line-height: 1.1; 
 }
 
-/* Contenido principal */
 main {
   flex: 1;
   margin-top: 40px;
-
-  /* ✅ margen interno para que nunca choque con los bordes */
   padding: 0 15px;
   box-sizing: border-box;
 }
 
-/* Instrucciones */
 .instrucciones {
   width: 80%;
   max-width: 500px;
@@ -89,7 +82,6 @@ main {
   word-wrap: break-word;
 }
 
-/* Marco contenedor */
 .marco {
   position: relative;
   width: 50%;           
@@ -106,39 +98,32 @@ main {
   padding: 0;
 }
 
-/* Cuadro de entrada dentro del marco */
 #entrada {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  background-color: transparent; /* ✅ fondo completamente transparente */
-  border: none; /* sin bordes visibles */
+  background-color: transparent;
+  border: none; 
   border-radius: 10px;
-
   width: 82%;
   height: 82%;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
-  box-shadow: none; /* ✅ sin sombra */
+  box-shadow: none; 
   padding: 20px 25px;
   padding-top: 40px;
 }
 
-
-/* Contenedor horizontal para label, input y botón */
 #entrada .fila {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 20px; /* un poco más de espacio entre la fila y el resultado */
+  margin-bottom: 20px; 
 }
 
 #entrada label {
@@ -170,7 +155,7 @@ main {
   background-color: #005fa3;
 }
 .custom-loader {
-  display: none; /* oculto por defecto */
+  display: none; 
   width: 120px;
   height: 22px;
   border-radius: 20px;
@@ -202,8 +187,6 @@ main {
   text-align: center;
 }
 
-
-/* Pie de página */
 footer {
   background-color: #333;
   color: rgba(255, 255, 255, 0.9);
@@ -218,11 +201,10 @@ footer {
 }
 
 
-/* 📱 Responsividad */
 @media (max-width: 768px) {
   .logo {
-    left: 6%;   /* un poco más centrado en pantallas medianas */
-    width: 18%; /* ocupa un poquito más del ancho disponible */
+    left: 6%;   
+    width: 18%; 
   }
 
   header {
@@ -244,7 +226,7 @@ footer {
   }
 
   #entrada {
-    width: 78%;  /* relación constante */
+    width: 78%;  
     height: 78%;
   }
 
@@ -260,8 +242,8 @@ footer {
 
 @media (max-width: 600px) {
   .logo {
-    left: 6%;   /* margen relativo */
-    width: 18%; /* un poco más grande proporcionalmente */
+    left: 6%;   
+    width: 18%; 
   }
 
   header {
@@ -274,12 +256,12 @@ footer {
   }
 
   .instrucciones p {
-    font-size: 1.1em; /* mejora la lectura */
+    font-size: 1.1em; 
   }
 
   .marco {
-    width: 80%;         /* ocupa más del ancho disponible */
-    max-width: 420px;   /* no lo reduzcas tanto */
+    width: 80%;         
+    max-width: 420px;   
   }
 
   #entrada {
@@ -361,7 +343,6 @@ footer {
   }
 }
 
-/* 📱 Responsividad extra para teléfonos pequeños (Android/iPhone SE, Mini, etc.) */
 @media (max-width: 360px) {
   header h1 {
     font-size: 1.6em;
@@ -406,4 +387,5 @@ footer {
     max-width: 100%;
   }
 }
+
 
