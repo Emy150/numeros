@@ -314,5 +314,96 @@ footer {
     line-height: 1.3em;
     max-width: 90%;
   }
-
 }
+
+@media (max-width: 430px) {
+  header h1 {
+    font-size: 1.9em;
+    padding-left: 10%;
+  }
+
+  .instrucciones p {
+    font-size: 1em;
+  }
+
+  .marco {
+    width: 90%;
+    max-width: 380px;
+  }
+
+  #entrada {
+    width: 90%;
+    height: 90%;
+    padding: 10px 15px;
+    padding-top: 20px;
+  }
+
+  #entrada label {
+    font-size: 1em;
+  }
+
+  #entrada input {
+    font-size: 0.95em;
+    padding: 8px;
+    width: 70%;
+  }
+
+  #entrada button {
+    font-size: 1em;
+    padding: 8px 12px;
+    width: 75%;
+  }
+
+  #resultado {
+    font-size: 1em;
+    line-height: 1.2em;
+    max-width: 95%;
+  }
+}
+
+/* 📱 Responsividad extra para teléfonos pequeños (Android/iPhone SE, Mini, etc.) */
+@media (max-width: 360px) {
+  header h1 {
+    font-size: 1.6em;
+    padding-left: 5%;
+  }
+
+  .instrucciones p {
+    font-size: 0.95em;
+  }
+
+  .marco {
+    width: 95%;
+    max-width: 350px;
+  }
+
+  #entrada {
+    width: 95%;
+    height: 95%;
+    padding: 8px 10px;
+    padding-top: 15px;
+  }
+
+  #entrada label {
+    font-size: 0.9em;
+  }
+
+  #entrada input {
+    font-size: 0.9em;
+    padding: 6px;
+    width: 65%;
+  }
+
+  #entrada button {
+    font-size: 0.95em;
+    padding: 6px 10px;
+    width: 70%;
+  }
+
+  #resultado {
+    font-size: 0.95em;
+    line-height: 1.15em;
+    max-width: 100%;
+  }
+}
+
