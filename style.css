@@ -34,7 +34,7 @@ body {
 /* --- Header --- */
 header {
   background-color: #F9A4CB;
-  color: #000000;
+  color: #FFFFFF;
   padding: 4%; 
   width: 100%;
   display: flex;
@@ -388,5 +388,6 @@ footer {
     max-width: 100%;
   }
 }
+
 
 
