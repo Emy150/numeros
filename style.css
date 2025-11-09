@@ -33,7 +33,7 @@ body {
 
 /* --- Header --- */
 header {
-  background-color: #718DBC;
+  background-color: #F9A4CB;
   color: #FFFFFF;
   padding: 4%; 
   width: 100%;
@@ -388,6 +388,7 @@ footer {
     max-width: 100%;
   }
 }
+
 
 
 
