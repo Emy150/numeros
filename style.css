@@ -149,7 +149,7 @@ main {
   font-family: 'SAI2', cursive;
   padding: 10px 15px;
   font-size: 1.2em;
-  background-color: #007acc;
+  background-color: #718DBC;
   color: white;
   border: none;
   border-radius: 6px;
@@ -388,4 +388,5 @@ footer {
     max-width: 100%;
   }
 }
+
 
