@@ -212,7 +212,9 @@ footer {
   font-family: 'SAI2', cursive;
   font-size: 0.90em;
   line-height: 0.2em;
-  width: 100%; /* ✅ ocupa todo el ancho */
+  width: 100%; 
+  color: white;
+  text-decoration: none;
 }
 
 
@@ -312,4 +314,5 @@ footer {
     line-height: 1.3em;
     max-width: 90%;
   }
+
 }
