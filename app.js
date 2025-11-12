@@ -33,6 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    const LIMITE_MAX = 1000000; // 1 millón
+    if (n > LIMITE_MAX) {
+      resultado.textContent = `El número ingresado es demasiado grande. Por favor, ingrese un número menor o igual a ${LIMITE_MAX}.`;
+      return;
+    }
+
     // Mostrar loader
     loader.style.display = "block";
     resultado.innerHTML = ""; // limpiar resultado mientras carga
