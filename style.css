@@ -1,3 +1,222 @@
+@font-face {
+  font-family: 'SAI';
+  src: url('Grunge Decade.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SAI2';
+  src: url('Bauhaus STD Demi.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Estilos generales */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+  background-color: #F9A4CB;
+  color: #000000;
+  padding: 4%; /* antes 30px → ahora más bajo */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 4px solid #000000;
+}
+
+.logo {
+  position: absolute;
+  left: 6%; /* margen proporcional */
+  width: 18%; /* ligeramente menor para ajustarse al header */
+  max-width: 100px; /* límite superior reducido */
+  min-width: 60px;  
+  height: auto;
+  object-fit: contain;
+}
+
+header h1 {
+  font-family: 'SAI', cursive;
+  font-size: 4em; /* antes 4em */
+  margin: 0;
+  padding-left: 120px; /* menos espacio lateral */
+  text-align: center;
+  line-height: 1.1; /* reduce el espacio vertical interno */
+}
+
+/* Contenido principal */
+main {
+  flex: 1;
+  margin-top: 40px;
+
+  /* ✅ margen interno para que nunca choque con los bordes */
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Instrucciones */
+.instrucciones {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto 25px auto;
+}
+
+.instrucciones p {
+  font-family: 'SAI2', cursive;
+  font-size: 1.5em;
+  margin: 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Marco contenedor */
+.marco {
+  position: relative;
+  width: 50%;           
+  max-width: 450px;     
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 40px auto;
+  background-image: url('frame.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Cuadro de entrada dentro del marco */
+#entrada {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: transparent; /* ✅ fondo completamente transparente */
+  border: none; /* sin bordes visibles */
+  border-radius: 10px;
+
+  width: 82%;
+  height: 82%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  box-shadow: none; /* ✅ sin sombra */
+  padding: 20px 25px;
+  padding-top: 40px;
+}
+
+
+/* Contenedor horizontal para label, input y botón */
+#entrada .fila {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px; /* un poco más de espacio entre la fila y el resultado */
+}
+
+#entrada label {
+  font-family: 'SAI2', cursive;
+  font-size: 1.4em;
+}
+
+#entrada input {
+  padding: 12px;
+  font-size: 1.1em;
+  width: 120px;
+  max-width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#entrada button {
+  font-family: 'SAI2', cursive;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#entrada button:hover {
+  background-color: #005fa3;
+}
+.custom-loader {
+  display: none; /* oculto por defecto */
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #718DBC;
+  border: 2px solid;
+  position: relative;
+}
+
+.custom-loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: #718DBC;
+  animation: p6 4s infinite;
+}
+
+@keyframes p6 {
+  100% { inset: 0; }
+}
+
+#resultado {
+  margin-top: 10px;
+  font-family: 'SAI2';
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #333;
+  text-align: center;
+}
+
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 8px 0;
+  margin-top: auto;
+  font-family: 'SAI2', cursive;
+  font-size: 0.90em;
+  line-height: 0.2em;
+  width: 100%; /* ✅ ocupa todo el ancho */
+}
+
+
+/* 📱 Responsividad */
 /* --- Fuentes --- */
 @font-face {
   font-family: 'SAI';
@@ -93,7 +312,7 @@ main {
   max-width: 450px;     
   aspect-ratio: 1 / 1;
   margin: 0 auto 40px auto;
-  background-image: url('frame.png');
+  background-image: url('frame.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -388,9 +607,3 @@ footer {
     max-width: 100%;
   }
 }
-
-
-
-
-
-
