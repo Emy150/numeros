@@ -21,12 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Convertir a número
     const n = parseInt(valor);
 
-    // Validar número 0 
+    // Validar número 0
     if (n === 0) {
       resultado.textContent = "El número 0 no puede ser clasificado como primo ni compuesto. Por favor, ingrese un número mayor que 0.";
       return;
     }
 
+    // Validar número 1
     if (isNaN(n) || n === 1) {
       resultado.textContent = "El número 1 no puede ser clasificado como primo ni compuesto. Por favor, ingrese un número entero mayor que 1.";
       return;
@@ -71,11 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // ---- Paso 3 y 4: Comprobar divisibilidad ----
+      const divisores = [];
       let esCompuesto = false;
+
       for (let i = 0; i < primos.length; i++) {
         if (n % primos[i] === 0) {
+          divisores.push(primos[i]);
           esCompuesto = true;
-          break;
         }
       }
 
@@ -89,7 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       mensaje += `Su raíz cuadrada entera es: ${raizEntera}<br>`;
       mensaje += `El residuo de la raíz cuadrada es: ${residuo}<br>`;
-      mensaje += `Factores primos menores o iguales a la raíz: ${primos.join(", ") || "Ninguno"}`;
+      mensaje += `Factores primos menores o iguales a la raíz: ${primos.join(", ") || "Ninguno"}<br><br>`;
+
+      // ---- Nuevo apartado: divisibilidad específica ----
+      if (divisores.length > 0) {
+        mensaje += `El número ${n} es divisible únicamente entre: ${divisores.join(", ")}.`;
+      } else {
+        mensaje += `El número ${n} no es divisible por ninguno de los primos menores o iguales a su raíz (${raizEntera}).`;
+      }
 
       // Mostrar resultado en el div
       resultado.innerHTML = mensaje;
