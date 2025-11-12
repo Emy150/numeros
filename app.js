@@ -21,9 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Convertir a número
     const n = parseInt(valor);
 
-    // Verificar que sea un número válido
-    if (isNaN(n) || n <= 1) {
-      resultado.textContent = "El número 1 no es compuesto ni primo! Ingresa un número entero mayor que 1.";
+    // Validar número 0 
+    if (n === 0) {
+      resultado.textContent = "El número 0 no puede ser clasificado como primo ni compuesto. Por favor, ingrese un número mayor que 0.";
+      return;
+    }
+
+    if (isNaN(n) || n === 1) {
+      resultado.textContent = "El número 1 no puede ser clasificado como primo ni compuesto. Por favor, ingrese un número entero mayor que 1.";
       return;
     }
 
@@ -35,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       loader.style.display = "none";
 
-      // ---- Paso 1: Calcular raíz cuadrada entera (sin Math.sqrt) ----
+      // ---- Paso 1: Calcular raíz cuadrada entera ----
       let raiz = 0;
       while (raiz * raiz < n) {
         raiz++;
